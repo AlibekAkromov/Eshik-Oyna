@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '3rem',
+            sm: '0.3rem',
+            lg: '3rem',
+            xl: '3rem',
+            '2xl': '0.3rem',
+          },
+        },
+        extend: {
+          keyframes: {
+            wiggle: {
+              '0%': { transform: 'translateY(100%)' },
+              '100%': { transform: 'translate(0)' },
+            },
+            wiggle1: {
+              '0%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+            wiggle2: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+          },
+          animation: {
+            wiggle: 'wiggle 2s ease-in-out',
+            wiggle1: 'wiggle1 2s ease-in-out',
+            wiggle2: 'wiggle2 2s ease-in-out',
+          },
+          backgroundImage: {
+            hero_img: "url('/images/hero.jpg')",
+          },
+          colors: {
+            kok: "#062a4d",
+            oq: "#f2f0f0",
+            toq_kok: "#212353",
+            kok1: "#439DC3",
+          },
+        },
+      },
+      darkMode: "class",
+    };
+  </script>
+</head>
+
+<body class="bg-oq dark:bg-black overflow-x-hidden">
+  <div class="px-10 pt-10">
+    <ul
+      class="absolute flex flex-col scale-0 translate-x-full right-0 top-0 bg-toq_kok w-10/12 py-5 px-5 text-white h-screen duration-500"
+      id="burger_anim">
+      <div class="flex justify-end">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 -0.5 25 25" fill="none"
+          id="close_burger">
+          <path
+            d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"
+            fill="#ffffff" />
+        </svg>
+      </div>
+      <li class="border-b-white border-b-[1px] py-4 pl-1">
+        <a href="#main">BOSH SAHIFA</a>
+      </li>
+      <li class="border-b-white border-b-[1px] py-4 pl-1">
+        <a href="">MAHSULOTLAR</a>
+      </li>
+      <li class="border-b-white border-b-[1px] py-4 pl-1 mb-3">ALOQA</li>
+      <li class="mb-3">
+        <a href="tel:+998909089477" class="ml-0 md:ml-[80px] border-[1px] rounded-md text-sm py-1 px-3">+998 90 908 94
+          77</a>
+      </li>
+      <li class="flex gap-2 ml-0 md:ml-[70px] text-toq_kok">
+        <a href="" class="bg-white p-1 rounded-md">
+          <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" viewBox="0 0 32 32">
+            <path
+              d="M31.997 15.999c0-8.836-7.163-15.999-15.999-15.999s-15.999 7.163-15.999 15.999c0 7.985 5.851 14.604 13.499 15.804v-11.18h-4.062v-4.625h4.062v-3.525c0-4.010 2.389-6.225 6.043-6.225 1.75 0 3.581 0.313 3.581 0.313v3.937h-2.017c-1.987 0-2.607 1.233-2.607 2.498v3.001h4.437l-0.709 4.625h-3.728v11.18c7.649-1.2 13.499-7.819 13.499-15.804z">
+            </path>
+          </svg>
+        </a>
+        <a href="" class="bg-white p-1 rounded-md">
+          <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" viewBox="0 0 32 32">
+            <path
+              d="M21.138 0.242c3.767 0.007 3.914 0.038 4.65 0.144 1.52 0.219 2.795 0.825 3.837 1.821 0.584 0.562 0.987 1.112 1.349 1.848 0.442 0.899 0.659 1.75 0.758 3.016 0.021 0.271 0.031 4.592 0.031 8.916s-0.009 8.652-0.030 8.924c-0.098 1.245-0.315 2.104-0.743 2.986-0.851 1.755-2.415 3.035-4.303 3.522-0.685 0.177-1.304 0.26-2.371 0.31-0.381 0.019-4.361 0.024-8.342 0.024s-7.959-0.012-8.349-0.029c-0.921-0.044-1.639-0.136-2.288-0.303-1.876-0.485-3.469-1.784-4.303-3.515-0.436-0.904-0.642-1.731-0.751-3.045-0.031-0.373-0.039-2.296-0.039-8.87 0-2.215-0.002-3.866 0-5.121 0.006-3.764 0.037-3.915 0.144-4.652 0.219-1.518 0.825-2.795 1.825-3.833 0.549-0.569 1.105-0.975 1.811-1.326 0.915-0.456 1.756-0.668 3.106-0.781 0.374-0.031 2.298-0.038 8.878-0.038h5.13zM15.999 4.364v0c-3.159 0-3.555 0.014-4.796 0.070-1.239 0.057-2.084 0.253-2.824 0.541-0.765 0.297-1.415 0.695-2.061 1.342s-1.045 1.296-1.343 2.061c-0.288 0.74-0.485 1.586-0.541 2.824-0.056 1.241-0.070 1.638-0.070 4.798s0.014 3.556 0.070 4.797c0.057 1.239 0.253 2.084 0.541 2.824 0.297 0.765 0.695 1.415 1.342 2.061s1.296 1.046 2.061 1.343c0.74 0.288 1.586 0.484 2.825 0.541 1.241 0.056 1.638 0.070 4.798 0.070s3.556-0.014 4.797-0.070c1.239-0.057 2.085-0.253 2.826-0.541 0.765-0.297 1.413-0.696 2.060-1.343s1.045-1.296 1.343-2.061c0.286-0.74 0.482-1.586 0.541-2.824 0.056-1.241 0.070-1.637 0.070-4.797s-0.015-3.557-0.070-4.798c-0.058-1.239-0.255-2.084-0.541-2.824-0.298-0.765-0.696-1.415-1.343-2.061s-1.295-1.045-2.061-1.342c-0.742-0.288-1.588-0.484-2.827-0.541-1.241-0.056-1.636-0.070-4.796-0.070zM14.957 6.461c0.31-0 0.655 0 1.044 0 3.107 0 3.475 0.011 4.702 0.067 1.135 0.052 1.75 0.241 2.16 0.401 0.543 0.211 0.93 0.463 1.337 0.87s0.659 0.795 0.871 1.338c0.159 0.41 0.349 1.025 0.401 2.16 0.056 1.227 0.068 1.595 0.068 4.701s-0.012 3.474-0.068 4.701c-0.052 1.135-0.241 1.75-0.401 2.16-0.211 0.543-0.463 0.93-0.871 1.337s-0.794 0.659-1.337 0.87c-0.41 0.16-1.026 0.349-2.16 0.401-1.227 0.056-1.595 0.068-4.702 0.068s-3.475-0.012-4.702-0.068c-1.135-0.052-1.75-0.242-2.161-0.401-0.543-0.211-0.931-0.463-1.338-0.87s-0.659-0.794-0.871-1.337c-0.159-0.41-0.349-1.025-0.401-2.16-0.056-1.227-0.067-1.595-0.067-4.703s0.011-3.474 0.067-4.701c0.052-1.135 0.241-1.75 0.401-2.16 0.211-0.543 0.463-0.931 0.871-1.338s0.795-0.659 1.338-0.871c0.41-0.16 1.026-0.349 2.161-0.401 1.073-0.048 1.489-0.063 3.658-0.065v0.003zM16.001 10.024c-3.3 0-5.976 2.676-5.976 5.976s2.676 5.975 5.976 5.975c3.3 0 5.975-2.674 5.975-5.975s-2.675-5.976-5.975-5.976zM16.001 12.121c2.142 0 3.879 1.736 3.879 3.879s-1.737 3.879-3.879 3.879c-2.142 0-3.879-1.737-3.879-3.879s1.736-3.879 3.879-3.879zM22.212 8.393c-0.771 0-1.396 0.625-1.396 1.396s0.625 1.396 1.396 1.396 1.396-0.625 1.396-1.396c0-0.771-0.625-1.396-1.396-1.396v0.001z">
+            </path>
+          </svg>
+        </a>
+        <a href="" class="bg-white p-1 rounded-md">
+          <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" viewBox="0 0 28 28">
+            <path
+              d="M18.578 20.422l2.297-10.828c0.203-0.953-0.344-1.328-0.969-1.094l-13.5 5.203c-0.922 0.359-0.906 0.875-0.156 1.109l3.453 1.078 8.016-5.047c0.375-0.25 0.719-0.109 0.438 0.141l-6.484 5.859-0.25 3.563c0.359 0 0.516-0.156 0.703-0.344l1.687-1.625 3.5 2.578c0.641 0.359 1.094 0.172 1.266-0.594zM28 14c0 7.734-6.266 14-14 14s-14-6.266-14-14 6.266-14 14-14 14 6.266 14 14z">
+            </path>
+          </svg>
+        </a>
+        <a href="" class="bg-white p-1 rounded-md">
+          <svg class="fill-dark-blue" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" viewBox="0 0 16 16">
+            <path
+              d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <header class="bg-oq sticky top-0 w-full h-20">
+    <div class="container mx-auto flex justify-center gap-[480px] dark:bg-black">
+      <div>
+        <img class=""
+          src="https://eshikoyna.uz/wp-content/uploads/2023/04/cropped-photo_2023-04-05_12-46-59-removebg-preview.png"
+          alt="" width="100px" />
+      </div>
+      <div class="flex gap-3">
+        <div class="hidden gap-3 lg:flex">
+          <a href="index.html" class="text-kok hover:underline underline-offset-[25px] dark:text-white">
+            BOSH SAHIFA
+          </a>
+          <a href="#mahsulotlar" class="text-kok hover:underline underline-offset-[25px] dark:text-white">
+            MAHSULOTLAR
+          </a>
+          <a href="#aloqa" class="text-kok hover:underline underline-offset-[25px] dark:text-white">
+            ALOQA
+          </a>
+        </div>
+        <div class="flex">
+          <div>
+            <select class="hidden bg-transparent md:">
+              <option>ᴜᴢ</option>
+              <option>ʀᴜ</option>
+            </select>
+          </div>
+          <div>
+            <a href="tel:+998909089477" target="_blank"
+              class="bg-btn_color text-kok dark:bg-gray-500 px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_1px_30px_rgb(9,9,9,9.1)] dark:hover:text-gray-300 dark:text-white duration-500 hover:text-och_kok">
+              +998 90 908 94 77
+            </a>
+          </div>
+          <div class="flex gap-3">
+            <button id="theme-toggle" type="button"
+              class="w-9 h-9 bg-gray-700 text-gray-400 dark:text-orange-600 dark:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon" class="w-5 h-[15px] hidden" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg id="theme-toggle-light-icon" class="w-5 h-[15px] hidden" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <svg class="kadence-svg-icon kadence-menu2-svg text-toq_kok hover:text-kok1 duration-500"
+              fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28"
+              viewBox="0 0 24 28" id="open_burger">
+              <title>Toggle Menu</title>
+              <path
+                d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="flex justify-center pb-3 dark:bg-slate-900 mt-3">
+      <div class="bg-hero_img bg-cover flex justify-center items-end w-[170vh] h-[75vh] pb-10 bg-no-repeat">
+        <a href="tel:+998909089477" target="_blank"
+          class="text-white bg-toq_kok px-10 py-3 rounded-md font-light hover:bg-white hover:text-toq_kok">BOG'LANISH</a>
+      </div>
+    </section>
+    <section class="animate-wiggle duration-1000 bg-white dark:bg-black py-10" id="mahsulotlar">
+      <div class="mt-5 flex flex-col justify-between animate-wiggle duration-1000">
+        <div class="flex justify-center">
+          <h1 class="text-kok text-3xl font-bold dark:text-white">Bizning mahsulotlar</h1>
+        </div>
+        <div class="flex-row gap-5 lg:flex lg:ml-0">
+          <div class="flex flex-col">
+            <div>
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/Untitled-design-13.png" alt="" width="250px" />
+            </div>
+            <div class="bg-oq w-72 h-20 text-center">
+              <h1 class="text-2xl font-bold">
+                PVH yoki alyumindan eshik va oymalar
+              </h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div>
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/Untitled-design-14.png" alt="" width="250px" />
+            </div>
+            <div class="bg-oq w-80 h-20 text-center">
+              <h1 class="text-2xl font-bold">
+                Qalin shishalik peregorodkalar
+              </h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div>
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/1.png" alt="" width="250px" />
+            </div>
+            <div class="bg-oq w-80 h-12 text-center">
+              <h1 class="text-2xl font-bold">Podokonniklar</h1>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div>
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/2.png" alt="" width="250px" />
+            </div>
+            <div class="bg-oq w-80 h-12 text-center">
+              <h1 class="text-2xl font-bold">Moskitniy setkalar</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="flex-row justify-center ml-80 mt-14 lg:flex gap-[310px] lg:ml-0">
+        <div class="animate-wiggle2">
+          <h1 class="text-kok font-bold text-2xl dark:text-white">Biz haqimizda</h1>
+          <p class="text-kok font-bold dark:text-white">
+            «RUSTAM PROFIL» xususiy korxonasi 2017 yilda tashkil topgan<br>
+            bo’lib, bugungi kunda qurilish sohasida kerakli bo’lgan
+            profnastil,<br>
+            gipsokarton uchun profillar ishlab chiqarish bilan bir qatorda<br>
+            alyumin yoki plastik eshik va oynalar yasash va o’rnatish
+            ishlarini<br>
+            ham amalga oshirib kelmoqda. Xizmatlar katta tajribaga ega
+            bo’lgan<br>
+            mutaxassislar tomonidan bajariladi. Mahsulotlarimiz sifatli
+            bo’lishi<br>
+            uchun biz yurtimizda mashxur bo’lgan AKFA, IMZO va ENGELBERG<br>
+            kabi brendga ega profillarini ishlatamiz
+          </p>
+        </div>
+        <div class="animate-wiggle1 duration-1000">
+          <img
+            src="https://eshikoyna.uz/wp-content/uploads/2023/04/cropped-photo_2023-04-05_12-46-59-removebg-preview.png"
+            alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="container bg-white py-10 mt-8">
+      <div class="animate-wiggle">
+        <div class="flex justify-center">
+          <h1 class="text-kok font-bold text-3xl dark:text-white">
+            Nega bizni tanlashingiz kerak?
+          </h1>
+        </div>
+        <div class="flex-row justify-center gap-96 mt-14 lg:flex lg:gap-10">
+          <div class="flex flex-col text-center justify-center">
+            <div class="flex justify-center">
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/group-2.png" alt="" width="80px">
+            </div>
+            <div>
+              <h1 class="text-kok font-bold text-2xl">Tajriba</h1>
+              <p class="text-kok font-semibold">
+                Xizmatlar katta tajribaga ega<br />
+                bo’lgan mutaxassislar tomonidan<br />
+                bajariladi
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col text-center justify-center">
+            <div class="flex justify-center">
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/speech-bubble.png" alt="" width="80px" />
+            </div>
+            <div>
+              <h1 class="text-kok font-bold text-2xl">Tajriba</h1>
+              <p class="text-kok font-semibold">
+                Xizmatlar katta tajribaga ega<br />
+                bo’lgan mutaxassislar tomonidan<br />
+                bajariladi
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col text-center justify-center">
+            <div class="flex justify-center">
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/clock.png" alt="" width="80px" />
+            </div>
+            <div>
+              <h1 class="text-kok font-bold text-2xl">Tajriba</h1>
+              <p class="text-kok font-semibold">
+                Xizmatlar katta tajribaga ega<br />
+                bo’lgan mutaxassislar tomonidan<br />
+                bajariladi
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col text-center justify-center">
+            <div class="flex justify-center">
+              <img src="https://eshikoyna.uz/wp-content/uploads/2023/04/shield-2.png" alt="" width="80px" />
+            </div>
+            <div>
+              <h1 class="text-kok font-bold text-2xl dark:text-white">Tajriba</h1>
+              <p class="text-kok font-semibold dark:text-white">
+                Xizmatlar katta tajribaga ega<br />
+                bo’lgan mutaxassislar tomonidan<br />
+                bajariladi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto bg-oq mt-12">
+        <div class="flex-row ml-80 justify-center gap-40 lg:flex lg:ml-0">
+          <div class="animate-wiggle2">
+            <div class="flex flex-col mt-24">
+              <h1 class="text-kok font-bold">
+                Bizning korxonada turli hil o’lchamdagi eshik<br />
+                va oynalar ishlab chiqariladi. Undan<br />
+                tashqari, hozirgi zamonaviy ofislar uchun<br />
+                xonalarda devor o’rniga qalin shishalar<br />
+                yasash va o’rnatish xizmatlari ham mavjud.
+              </h1>
+            </div>
+            <div class="mt-10">
+              <a href="tel:+998909089477" target="_blank"
+                class="text-white bg-toq_kok px-10 py-3 rounded-sm font-light hover:bg-white hover:text-toq_kok">BOG'LANISH</a>
+            </div>
+          </div>
+          <div class="animate-wiggle1 mt-10 lg:">
+            <img class="rounded-md" src="https://eshikoyna.uz/wp-content/uploads/2023/04/Uzbte.jpeg" alt=""
+              width="500" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto bg-oq mt-16 py-9">
+        <div class="flex-row ml-80 justify-center gap-40 lg:flex lg:ml-0">
+          <div class="animate-wiggle2">
+            <img class="rounded-md" src="https://eshikoyna.uz/wp-content/uploads/2023/04/image1-4-1024x617.jpeg" alt=""
+              width="500" />
+          </div>
+          <div class="animate-wiggle1">
+            <div class="flex flex-col mt-24">
+              <h1 class="text-kok font-bold">
+                Bizning korxonada turli hil o’lchamdagi eshik<br>
+                va oynalar ishlab chiqariladi. Undan<br>
+                tashqari, hozirgi zamonaviy ofislar uchun<br>
+                xonalarda devor o’rniga qalin shishalar<br>
+                yasash va o’rnatish xizmatlari ham mavjud.
+              </h1>
+            </div>
+            <div class="mt-10 lg:">
+              <a href="tel:+998909089477" target="_blank"
+                class="text-white bg-toq_kok px-10 py-3 rounded-sm font-light hover:bg-white hover:text-toq_kok">BOG'LANISH</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container" id="#aloqa">
+      <div class="animate-wiggle flex-row justify-around p-12 lg:flex">
+        <div class="flex flex-col justify-center text-center gap-5">
+          <div class="flex justify-center gap-3">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=86f3b3ebb863d6a175d4cbfd92cb2495-3922615-images-thumbs&n=13&fyandex=1"
+              alt="" width="70">
+          </div>
+          <div>
+            <h1 class="text-kok font-bold text-2xl dark:text-white">Elektron Pochta</h1>
+            <p class="text-kok dark:text-white">Barcha o’zingizni qiziqtirgan savollaringizni<br> pochta manzilimizga
+              jo’natishingiz mumkin</p>
+            <a href="juraev.shuhrat1988@gmail.com"
+              class="underline text-kok1 underline-kok1 font-semibold dark:text-white">juraev.shuhrat1988@gmail.com</a>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center text-center gap-5">
+          <div class="flex justify-center">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=0e823fa5a7a67d31d2103932ed4907cdeb8cbef2-10144254-images-thumbs&n=13&fyandex=1"
+              alt="" width="70">
+          </div>
+          <div class="flex flex-col gap-3">
+            <h1 class="text-kok font-bold text-2xl dark:text-white">Telefon</h1>
+            <p class="text-kok dark:text-white">Buyurtma uchun quyidagi nomerlarimizga<br> aloqaga chiqishingiz mumkin
+            </p>
+            <a href="tel:+998909089477" class="underline text-kok1 underline-kok1 font-semibold dark:text-white">+998 90
+              908 94 77</a>
+            <a href="tel:+998946666988" class="underline text-kok1 underline-kok1 font-semibold dark:text-white">+998 94
+              666 69 88</a>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center text-center gap-5">
+          <div class="flex justify-center">
+            <img
+              src="https://avatars.mds.yandex.net/i?id=00e4307cc42f5ae57aa1c228ad88c38902dd42fb-9093415-images-thumbs&n=13&fyandex=1"
+              alt="" width="70">
+          </div>
+          <div class="flex flex-col gap-3">
+            <h1 class="text-kok font-bold text-2xl dark:text-white">Bizning Manzil</h1>
+            <p class="text-kok dark:text-white">Manzilimizga soat 09:00 dan 19:00 gacha<br> tashrif buyurishingiz mumkin
+            </p>
+            <p href="juraev.shuhrat1988@gmail.com" class="text-kok1 font-semibold">Toshkent shahar, Mirzo Ulug’bek
+              tumani, Alisherobod<br> MFY, Nurli zamin ko’chasi, 83 – А</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d374.5188739221013!2d69.41327005101944!3d41.327329938154186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1705868632455!5m2!1sru!2s"
+          class="w-full h-[550px]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+    <section>
+      <section class="container">
+        <div class="container flex-row gap-0 ml-80 py-12 lg:flex lg:gap-72 lg:justify-center lg:ml-0">
+          <div>
+            <img
+              src="https://eshikoyna.uz/wp-content/uploads/2023/04/cropped-photo_2023-04-05_12-46-59-removebg-preview.png"
+              alt="" width="150">
+          </div>
+          <div class="lg:text-center">
+            <p class="text-kok dark:text-white">г.Ташкент, Мирзо-Улугбекский район,<br> Алишерабадский МФУ, улица Нурли
+              замина,<br> 83-А</p>
+          </div>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+998909089477" class="text-kok hover:text-kok1 dark:text-white">+998 90 908 94 77</a>
+            <a href="tel:+998946666988" class="text-kok hover:text-kok1 dark:text-white">+998 94 666 69 88</a>
+          </div>
+        </div>
+        <div class="mt-5 lg:flex justify-center">
+          <p class="text-kok">© 2024 Eshikoyna.Uz | Powered By <a href=""
+              class="text-kok underline underline-kok">Taskin
+              Agency</a></p>
+        </div>
+      </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
